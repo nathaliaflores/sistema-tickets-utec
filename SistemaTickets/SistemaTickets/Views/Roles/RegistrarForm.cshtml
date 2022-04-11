@@ -1,0 +1,22 @@
+﻿@model SistemaTickets.Models.Rol
+
+@{
+    ViewBag.Title = "Registrar Rol";
+}
+
+<h3>Registrar Rol</h3>
+<hr />
+
+@using (Html.BeginForm("Registrar", "Roles", FormMethod.Post)) {
+    <div class="row">
+        <div class="col-3 d-grid">
+            <div>
+                @Html.LabelFor(rol => rol.Nombre)
+                @Html.TextBoxFor(rol => rol.Nombre, (string)"", (object)(new { @class = "form-control" }))
+</div>
+            <br />
+            <input type="submit" class="btn btn-primary" value="Registrar" />
+        </div>
+        <div class="col-9"></div>
+    </div>
+}

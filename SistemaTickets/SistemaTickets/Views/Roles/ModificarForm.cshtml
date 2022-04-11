@@ -1,0 +1,30 @@
+﻿@model SistemaTickets.Models.Rol
+
+@{
+    ViewBag.Title = "Editar Rol";
+}
+
+<h3>Modificar Rol</h3>
+<hr />
+
+@using (Html.BeginForm("Modificar", "Roles", FormMethod.Post)) { 
+<div class="row">
+    <div class="col-3 d-grid">
+        @Html.HiddenFor(rol => rol.IdRol)
+
+        @Html.LabelFor(rol => rol.Nombre)
+        @Html.TextBoxFor(rol => rol.Nombre, "", new { @class = "form-control" })
+
+        @Html.LabelFor(rol => rol.Activo)
+        @Html.CheckBoxFor(rol => rol.Activo, true)
+
+        @Html.HiddenFor(rol => rol.IdUsuarioMod)
+
+        @Html.HiddenFor(rol => rol.FechaMod)
+        <br />
+        <input type="submit" class="btn btn-success" value="Modificar" />
+    </div>
+    <div class="col-9"></div>
+</div>
+}
+
