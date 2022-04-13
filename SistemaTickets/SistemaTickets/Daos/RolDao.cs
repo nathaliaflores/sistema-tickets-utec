@@ -28,11 +28,11 @@ namespace SistemaTickets.Daos {
                     int i = 0;
 
                     rol = new Rol();
-                    rol.IdRol = reader.GetInt32(i++);
-                    rol.Nombre = reader.GetString(i++);
-                    rol.Activo = "S".Equals(reader.GetString(i++)) ? true : false;
-                    rol.IdUsuarioMod = reader.GetInt32(i++);
-                    rol.FechaMod = reader.GetDateTime(i++);
+                    rol.IdRol = (int) reader.GetValue(reader.GetOrdinal("id_rol"));
+                    rol.Nombre = (string) reader.GetValue(reader.GetOrdinal("nombre"));
+                    rol.Activo = "S".Equals((string) reader.GetValue(reader.GetOrdinal("activo")));
+                    rol.IdUsuarioMod = (int) reader.GetValue(reader.GetOrdinal("id_usuario_mod"));
+                    rol.FechaMod = (DateTime) reader.GetValue(reader.GetOrdinal("fecha_mod"));
                     roles.Add(rol);
                 }   
 
@@ -67,11 +67,11 @@ namespace SistemaTickets.Daos {
                     int i = 0;
 
                     rol = new Rol();
-                    rol.IdRol = reader.GetInt32(i++);
-                    rol.Nombre = reader.GetString(i++);
-                    rol.Activo = "S".Equals(reader.GetString(i++)) ? true : false;
-                    rol.IdUsuarioMod = reader.GetInt32(i++);
-                    rol.FechaMod = reader.GetDateTime(i++);
+                    rol.IdRol = (int)reader.GetValue(reader.GetOrdinal("id_rol"));
+                    rol.Nombre = (string)reader.GetValue(reader.GetOrdinal("nombre"));
+                    rol.Activo = "S".Equals((string)reader.GetValue(reader.GetOrdinal("activo")));
+                    rol.IdUsuarioMod = (int)reader.GetValue(reader.GetOrdinal("id_usuario_mod"));
+                    rol.FechaMod = (DateTime)reader.GetValue(reader.GetOrdinal("fecha_mod"));
                 }
 
             }

@@ -15,48 +15,66 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #22577E;
+    background-color: #5d0a28;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
 }
 
-    .sidebar a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 20px;
-        color: #FFFFFF;
-        display: block;
-        transition: 0.3s;
-    }
+.sidebar .inf-usu-log {
+    font-size: 20px;
+    color: #FFF9B2;
+}
 
-        .sidebar a:hover {
-            color: #FAFFAF;
-            font-weight: bold;
-        }
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    display: block;
+    transition: 0.3s;
+}
 
-    .sidebar .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
+.sidebar a:hover {
+    color: #FFF9B2;
+    font-weight: bold;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
 
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #22577E;
+    background-color: #5d0a28;
     color: white;
     padding: 10px 15px;
     border: none;
 }
 
-    .openbtn:hover {
-        background-color: #444;
-    }
+.openbtn:hover {
+    background-color: #444;
+}
 
 #main {
     transition: margin-left .5s;
     padding: 16px;
 }
+
+h3 {
+    color: #5D0A28;
+}
+
+.color-utec {
+    color: #5D0A28;
+}
+
+.bg-color-utec {
+    background: #5D0A28;
+}
+

@@ -3,7 +3,7 @@ use sistema_tickets;
 go
 
 /* --------------------------------
-Tabla: roles
+Mantenimiento: roles
 -------------------------------- */
 
 -- sp_obtener_roles
@@ -119,5 +119,36 @@ end;
 go
 
 /* --------------------------------
-Tabla: unidades
+LoginDao
 -------------------------------- */
+
+-- sp_obtener_usuario_login
+
+create or alter procedure sp_obtener_usuario_login(
+	@usuario varchar(100),
+	@password varchar(200)
+)
+as
+begin
+	select 
+		usu.id_usuario,
+		usu.usuario,
+		usu.nombres,
+		usu.apellidos,
+		rol.nombre as rol
+	from
+		usuario usu 
+		join rol_usuario rus
+			on usu.id_usuario = rus.id_usuario
+		join rol rol 
+			on rus.id_rol = rol.id_rol
+	where 
+		1 = 1
+		and usu.usuario = @usuario
+		and password = @password
+	;
+end;
+
+go
+
+exec sp_obtener_usuario_login 'admin', 'admin';

@@ -1,0 +1,36 @@
+﻿@model SistemaTickets.Models.LoginRequest
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("IniciarSesion", "Login", FormMethod.Post)) {
+<div class="row mt-5">
+    <div class="col-12 text-center">
+        <h2 class="color-utec">SISTEMA DE TICKETS UTEC</h2>
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col-5"></div>
+    <div class="col-2">
+        <div class="mb-3 text-center">
+            <h2>Login</h2>
+        </div>
+        <hr />
+        <div class="mb-3">
+            @Html.LabelFor(loginRequest => loginRequest.Usuario)
+            @Html.TextBoxFor(loginRequest => loginRequest.Usuario, "", (new { @class = "form-control" }))
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(loginRequest => loginRequest.Password)
+            @Html.PasswordFor(loginRequest => loginRequest.Password, (new { @class = "form-control" }))
+        </div>
+        <div class="mb-3 d-grid">
+            <input type="submit" class="btn btn-secondary" value="Iniciar Sesion" />
+        </div>
+    </div>
+    <div class="col-5"></div>
+</div>
+}
+
+

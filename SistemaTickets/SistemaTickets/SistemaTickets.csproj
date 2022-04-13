@@ -122,13 +122,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Connection\Conexion.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MantenimientosController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Daos\LoginDao.cs" />
     <Compile Include="Daos\RolDao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Rol.cs" />
+    <Compile Include="Models\LoginRequest.cs" />
+    <Compile Include="Models\UsuarioLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +194,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Site.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -205,13 +210,14 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout-backup.cshtml" />
     <Content Include="Views\Roles\ModificarForm.cshtml" />
     <Content Include="Views\Roles\RegistrarForm.cshtml" />
     <Content Include="Views\Mantenimientos\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\img\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

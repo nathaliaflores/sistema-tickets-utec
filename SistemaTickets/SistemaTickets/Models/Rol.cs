@@ -6,7 +6,6 @@ using System.Web;
 namespace SistemaTickets.Models {
     public class Rol {
         public Rol() { }
-
         public int IdRol { get; set; }
         public String Nombre { get; set; }
         public bool Activo { get; set; }
