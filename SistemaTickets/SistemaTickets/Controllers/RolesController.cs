@@ -7,10 +7,10 @@ using SistemaTickets.Daos;
 using SistemaTickets.Models;
 
 namespace SistemaTickets.Controllers {
-    public class RolesController : Controller {
+    public class RolController : Controller {
 
         private RolDao rolDao;
-        public RolesController() {
+        public RolController() {
             this.rolDao = new RolDao();
         }
 

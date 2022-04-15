@@ -124,7 +124,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MantenimientosController.cs" />
-    <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\RolController.cs" />
     <Compile Include="Daos\LoginDao.cs" />
     <Compile Include="Daos\RolDao.cs" />
     <Compile Include="Global.asax.cs">
