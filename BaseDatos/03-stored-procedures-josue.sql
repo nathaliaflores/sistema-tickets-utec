@@ -80,6 +80,43 @@ end;
 
 go 
 
+-- sp_act_ina_estado
+
+create or alter procedure sp_act_ina_estado(
+	@id_estado int
+)
+as 
+begin	
+	declare @activo_actual char(1);
+	declare @activo_nuevo char(1);
+	
+	select 
+		@activo_actual = activo 
+	from 
+		estado
+	where 
+		1 = 1
+		and id_estado = @id_estado;
+	
+	if (@activo_actual = 'S') begin
+		set @activo_nuevo = 'N';
+	end
+	else begin 
+		set @activo_nuevo = 'S';
+	end ;
+	
+	update 
+		estado
+	set
+		activo = @activo_nuevo
+	where 
+		1 = 1
+		and id_estado = @id_estado
+	;
+end;
+
+go
+
 /* --------------------------------
 Mantenimiento: Ubicacion
 -------------------------------- */
@@ -158,6 +195,43 @@ end;
 
 go 
 
+--sp_act_ina_ubicacion
+
+create or alter procedure sp_act_ina_ubicacion(
+	@id_ubicacion int
+)
+as 
+begin	
+	declare @activo_actual char(1);
+	declare @activo_nuevo char(1);
+	
+	select 
+		@activo_actual = activo 
+	from 
+		ubicacion
+	where 
+		1 = 1
+		and id_ubicacion = @id_ubicacion;
+	
+	if (@activo_actual = 'S') begin
+		set @activo_nuevo = 'N';
+	end
+	else begin 
+		set @activo_nuevo = 'S';
+	end ;
+	
+	update 
+		ubicacion
+	set
+		activo = @activo_nuevo
+	where 
+		1 = 1
+		and id_ubicacion = @id_ubicacion
+	;
+end;
+
+go
+
 /* --------------------------------
 Mantenimiento: tipo_servicio
 -------------------------------- */
@@ -235,3 +309,39 @@ begin
 end;
 
 go 
+
+--sp_act_ina_tipo_servicio
+create or alter procedure sp_act_ina_tipo_servicio(
+	@id_tip_ser int
+)
+as 
+begin	
+	declare @activo_actual char(1);
+	declare @activo_nuevo char(1);
+	
+	select 
+		@activo_actual = activo 
+	from 
+		tipo_servicio
+	where 
+		1 = 1
+		and id_tip_ser = @id_tip_ser;
+	
+	if (@activo_actual = 'S') begin
+		set @activo_nuevo = 'N';
+	end
+	else begin 
+		set @activo_nuevo = 'S';
+	end ;
+	
+	update 
+		tipo_servicio
+	set
+		activo = @activo_nuevo
+	where 
+		1 = 1
+		and id_tip_ser = @id_tip_ser
+	;
+end;
+
+go
