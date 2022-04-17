@@ -1,0 +1,35 @@
+﻿@model IEnumerable<SistemaTickets.Models.Estado>
+
+@{
+    ViewBag.Title = "Estados";
+}
+<h3>Estados</h3>
+<hr />
+@Html.ActionLink("(+) Nuevo", "RegistrarForm", "Estados", null, new { @class = "btn btn-outline-primary btn-sm" })
+<br />
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.IdEstado)</th>
+            <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+            <th>@Html.DisplayNameFor(model => model.Activo)</th>
+            <th>@Html.DisplayNameFor(model => model.FechaMod)</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var estado in Model) {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => estado.IdEstado)</td>
+                <td>@Html.DisplayFor(modelItem => estado.Nombre)</td>
+                <td>@Html.DisplayFor(modelItem => estado.Activo)</td>
+                <td>@Html.DisplayFor(modelItem => estado.FechaMod)</td>
+                <td>
+                    @Html.ActionLink("Modificar", "ModificarForm", "Estados", new { id = estado.IdEstado }, new { @class = "btn btn-outline-success btn-sm" })
+                    @Html.ActionLink("Inactivar", "ActIna", "Estados", new { id = estado.IdEstado }, new { @class = "btn btn-outline-danger btn-sm" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

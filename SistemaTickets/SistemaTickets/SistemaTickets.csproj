@@ -124,12 +124,14 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MantenimientosController.cs" />
-    <Compile Include="Controllers\RolController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Daos\EstadoDao.cs" />
     <Compile Include="Daos\LoginDao.cs" />
     <Compile Include="Daos\RolDao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Estado.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\LoginRequest.cs" />
     <Compile Include="Models\UsuarioLogin.cs" />
@@ -214,6 +216,7 @@
     <Content Include="Views\Roles\RegistrarForm.cshtml" />
     <Content Include="Views\Mantenimientos\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Estados\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
