@@ -1,0 +1,31 @@
+﻿@model SistemaTickets.Models.Estado
+
+@{
+    ViewBag.Title = "Editar Estado";
+}
+
+<h3>Modificar Estado</h3>
+<hr />
+
+@using (Html.BeginForm("Modificar", "Estados", FormMethod.Post)) { 
+<div class="row">
+    <div class="col-2">
+        @Html.HiddenFor(estado => estado.IdEstado)
+        <div class="mb-3">
+            @Html.LabelFor(estado => estado.Nombre)
+            @Html.TextBoxFor(estado => estado.Nombre, "", new { @class = "form-control" })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(estado => estado.Activo)
+            @Html.CheckBoxFor(estado => estado.Activo, true)
+        </div>
+        @Html.HiddenFor(estado => estado.IdUsuarioMod)
+        @Html.HiddenFor(estado => estado.FechaMod)
+        <div class="mb-3 d-grid">
+            <input type="submit" class="btn btn-success" value="Modificar" />
+        </div>
+    </div>
+    <div class="col-10"></div>
+</div>
+}
+

@@ -1,0 +1,23 @@
+﻿@model SistemaTickets.Models.Estado
+
+@{
+    ViewBag.Title = "Registrar Rol";
+}
+
+<h3>Registrar Estado</h3>
+<hr />
+
+@using (Html.BeginForm("Registrar", "Estados", FormMethod.Post)) {
+    <div class="row">
+        <div class="col-2">
+            <div class="mb-3">
+                @Html.LabelFor(estado => estado.Nombre)
+                @Html.TextBoxFor(estado => estado.Nombre, "", (new { @class = "form-control" }))
+            </div>
+            <div class="mb-3 d-grid">
+                <input type="submit" class="btn btn-primary" value="Registrar" />
+            </div>
+        </div>
+        <div class="col-10"></div>
+    </div>
+}

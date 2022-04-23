@@ -217,6 +217,8 @@
     <Content Include="Views\Mantenimientos\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Estados\Index.cshtml" />
+    <Content Include="Views\Estados\ModificarForm.cshtml" />
+    <Content Include="Views\Estados\RegistrarForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

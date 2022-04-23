@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 using SistemaTickets.Connection;
@@ -28,8 +26,6 @@ namespace SistemaTickets.Daos {
 
                 while (reader.Read())
                 {
-                    int i = 0;
-
                     estado = new Estado();
                     estado.IdEstado = (int)reader.GetValue(reader.GetOrdinal("id_estado"));
                     estado.Nombre = (string)reader.GetValue(reader.GetOrdinal("nombre"));
@@ -71,8 +67,6 @@ namespace SistemaTickets.Daos {
                 
                 while (reader.Read())
                 {
-                    int i = 0;
-
                     estado = new Estado();
                     estado.IdEstado = (int)reader.GetValue(reader.GetOrdinal("id_estado"));
                     estado.Nombre = (string)reader.GetValue(reader.GetOrdinal("nombre"));
